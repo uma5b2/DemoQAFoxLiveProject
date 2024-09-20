@@ -77,7 +77,7 @@ public class Waits {
         }
     }
     
-    public static void waitUntil(final BooleanSupplier condition, int seconds) {
+    public static void waitUntil(BooleanSupplier condition, int seconds) {
         new WebDriverWait(Base.driver, seconds).until((WebDriver driver) -> condition.getAsBoolean());
     }
 
